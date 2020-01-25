@@ -1,0 +1,2215 @@
+/*=============================================
+EAM Consulting
+Mars 7,2019
+===========================================
+Summary
+===========================================
+00 - Variables Declaration
+01 - Import Fonts
+02 - Reset Default Styles
+03 - Common Style
+04 - header
+05 - hero
+06 - Why Us
+07 - Info
+08 - Industries
+09 - We Work With
+10 - News
+11 - Our Partners
+12 - Clients Comments
+13 - Capabilities
+14 - Contact Us
+15 - We Procceed
+16 - Posts
+17 - Related
+18 - History
+19 - Numbers
+20 - Expertise
+21 - Meet Rachid
+22 - In The Press
+23 - Latest News
+24 - Footer
+25 - Responsive
+===============================================*/
+
+
+/*================================================================================================================================================
+    00 - Variables Declaration
+================================================================================================================================================*/
+:root {
+    --main-color: #315267;
+    --secondary-color: #00a1dd;
+    --footer-bg-dark: #212121;
+    --footer-bg-light: #333333;
+    --section-bg-gradient: linear-gradient(#fefefe, #f2f8ff);
+    --section-bg-gradient-invers: linear-gradient(#f2f8ff, #fefefe);
+    --main-btn-bg: linear-gradient(to right, var(--secondary-color), #0089cf);
+    --paragraph-color-light: #838687;
+    --paragraph-hero-color: #7e929e;
+    --footer-color-light: #eff0f0;
+    --footer-color-dark: #898989;
+    --badge-bg: linear-gradient(#f7f7f7, #f1f1f1);
+    --badg-bg-hover: linear-gradient(#eeeeee, #fffff);
+}
+
+/*================================================================================================================================================
+    01 - Import Fonts
+================================================================================================================================================*/
+@font-face {
+    font-family: 'Futura Std Heavy';
+    src: url('../fonts/FuturaStd/FuturaStd-Heavy.otf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Futura Std HeavyOblique';
+    src: url('../fonts/FuturaStd/FuturaStd-HeavyOblique.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Futura Std Medium';
+    src: url('../fonts/FuturaStd/FuturaStd-Medium.otf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Futura Std MediumOblique';
+    src: url('../fonts/FuturaStd/FuturaStd-MediumOblique.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Futura Std Book';
+    src: url('../fonts/FuturaStd/FuturaStd-Book.otf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Futura Std BookOblique';
+    src: url('../fonts/FuturaStd/Futura Std Book Oblique.otf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Futura Std Light';
+    src: url('../fonts/FuturaStd/FuturaStd-Light.otf') format('truetype');
+    font-style: normal;
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'Futura Std LightOblique';
+    src: url('../fonts/FuturaStd/Futura Std Light Oblique.otf') format('truetype');
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Futura Std Bold';
+    src: url('../fonts/FuturaStd/Futura Std Bold.otf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Futura Std ExtraBold';
+    src: url('../fonts/FuturaStd/FuturaStd-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Brands";
+    font-style: normal;
+    font-weight: normal;
+    font-display: auto;
+    src: url(../fonts/webfonts/fa-brands-400.eot);
+    src: url(../fonts/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/webfonts/fa-brands-400.woff2) format("woff2"),
+        url(../fonts/webfonts/fa-brands-400.woff) format("woff"),
+        url(../fonts/webfonts/fa-brands-400.ttf) format("truetype"),
+        url(../fonts/webfonts/fa-brands-400.svg#fontawesome) format("svg")
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Pro";
+    font-style: normal;
+    font-weight: 300;
+    font-display: auto;
+    src: url(../fonts/webfonts/fa-light-300.eot);
+    src: url(../fonts/webfonts/fa-light-300.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/webfonts/fa-light-300.woff2) format("woff2"),
+        url(../fonts/webfonts/fa-light-300.woff) format("woff"),
+        url(../fonts/webfonts/fa-light-300.ttf) format("truetype"),
+        url(../fonts/webfonts/fa-light-300.svg#fontawesome) format("svg")
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url(../fonts/webfonts/fa-regular-400.eot);
+    src: url(../fonts/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/webfonts/fa-regular-400.woff2) format("woff2"),
+        url(../fonts/webfonts/fa-regular-400.woff) format("woff"),
+        url(../fonts/webfonts/fa-regular-400.ttf) format("truetype"),
+        url(../fonts/webfonts/fa-regular-400.svg#fontawesome) format("svg")
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Pro";
+    font-style: normal;
+    font-weight: 900;
+    font-display: auto;
+    src: url(../fonts/webfonts/fa-solid-900.eot);
+    src: url(../fonts/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/webfonts/fa-solid-900.woff2) format("woff2"),
+        url(../fonts/webfonts/fa-solid-900.woff) format("woff"),
+        url(../fonts/webfonts/fa-solid-900.ttf) format("truetype"),
+        url(../fonts/webfonts/fa-solid-900.svg#fontawesome) format("svg")
+}
+
+/*================================================================================================================================================
+    02 - Reset Default Styles
+================================================================================================================================================*/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Futura Std Book', sans-serif;
+    font-size: 15px;
+    color: var(--main-color);
+    background-color: #ffffff;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+    font-weight: 700;
+}
+
+nav i {
+    vertical-align: middle;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+    outline: none;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+li {
+    list-style: none;
+}
+
+/*================================================================================================================================================
+    03 - Common Style
+================================================================================================================================================*/
+.main-btn {
+    font-size: 15px;
+    font-family: "Futura Std light", sans-serif;
+    color: #ffffff !important;
+    line-height: 1.2;
+    text-shadow: 0px 1px 0px rgba(49, 82, 103, 0.004);
+    border-radius: 5px;
+    background-image: var(--main-btn-bg);
+    border: none;
+    padding: 0.7em 1.5em 0.5em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+    letter-spacing: .5px;
+}
+
+.main-btn:hover {
+    transition: .3s;
+    box-shadow: 0px 10px 30px -8px var(--secondary-color) !important;
+}
+
+.main-btn:focus,
+button:focus,
+a:focus {
+    outline: 0 !important;
+    cursor: pointer;
+}
+
+input,
+textarea:focus {
+    outline: 0;
+}
+
+.subtitle {
+    font-size: 25px;
+    font-family: "Futura Std Heavy", sans-serif;
+    font-weight: 700;
+}
+
+.hero-title {
+    color: var(--main-color);
+    font-size: 48px;
+    font-family: 'Futura Std Book', sans-serif;
+    font-weight: 100;
+}
+
+.hero-paragraph {
+    font-size: 18px;
+    font-family: "Futura Std Book", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 20px;
+    color: var(--paragraph-hero-color);
+}
+
+.header {
+    margin: 3em auto 6em;
+}
+
+.header .title {
+    font-size: 35px;
+    font-family: "Futura Std light", sans-serif;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+    margin: .5em 0;
+}
+
+.header .paragraph {
+    font-size: 16px;
+    font-family: "Futura Std Light", sans-serif;
+    color: var(--main-color) !important;
+    font-weight: 700;
+    text-align: center;
+    max-width: 600px;
+    margin: 1.5em auto 0;
+    padding: 0 15px;
+}
+
+.line {
+    width: 30%;
+    height: 2px;
+    background: var(--main-color);
+}
+
+.section {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.section-blue-bg {
+    background-image: var(--section-bg-gradient);
+}
+
+.section-blue-bg-invers {
+    background-image: var(--section-bg-gradient-invers);
+}
+
+.text-dark {
+    color: var(--main-color) !important;
+}
+
+.arrow-down-holder {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+}
+
+.arrow-down {
+    background-image: url(../img/commun/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 30px;
+}
+
+.badg {
+    background: var(--badge-bg);
+    padding: 6em 1em 2em;
+    transition: .5s;
+}
+
+.badg:hover {
+    cursor: pointer;
+    transition: .5s;
+    background: var(--badg-bg-hover);
+    transform: scale(1.01) translateY(-15px);
+    border: 1px solid #31526759;
+    box-shadow: 0px 0px 59px -30px var(--main-color);
+}
+
+.badg h3 {
+    font-size: 18px;
+    font-family: "Futura Std Heavy", sans-serif;
+    margin-bottom: 20px;
+}
+
+.badg>p {
+    font-size: 15px;
+    font-family: "Futura Std Book";
+    margin-bottom: 5px;
+}
+
+.badg div p {
+    font-size: 13px;
+    font-family: "Futura Std Book";
+}
+
+.badg-date {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.badg-date span {
+    color: var(--paragraph-color-light);
+    margin-left: .5rem;
+    font-size: 14px;
+}
+
+.category {
+    font-family: "Futura Std Bold";
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: var(--paragraph-color-light);
+    padding: 4px 5px;
+    font-size: 8px;
+    border-radius: 5px;
+    letter-spacing: .5px;
+    display: inline-block;
+}
+
+/*================================================================================================================================================
+    04 - header
+================================================================================================================================================*/
+
+#page>header.navbar {
+    transition: all .5s;
+}
+
+.navbar-toggler i {
+    color: var(--main-color);
+}
+
+#page>header.navbar .nav-item {
+    position: relative;
+}
+
+#page>header.navbar .nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: -19px;
+    left: 10px;
+    right: 10px;
+    display: inline-block;
+    height: 3px;
+    background-color: var(--main-color)
+}
+
+
+#page>header.navbar.on-scroll {
+    transition: all 1s;
+    background-color: #ffffff;
+    max-width: 100%;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
+#page>header.navbar.on-scroll a {
+    color: var(--main-color) !important;
+}
+
+#page>header.navbar ul li:not(:last-child) {
+    margin-right: 25px;
+}
+
+#page>header.navbar a {
+    font-size: 14px;
+    font-family: "Futura Std Book", sans-serif;
+    font-weight: 100;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.home-page#page>header.navbar a {
+    color: rgb(239, 240, 240);
+}
+
+#page>header.navbar a:hover,
+#page>header.navbar a:focus {
+    color: var(--secondary-color);
+}
+
+#page>header.navbar .dropdown-menu a {
+    color: var(--main-color);
+}
+
+#page>header.navbar .dropdown-toggle::after {
+    display: none;
+}
+
+#page>header.navbar .navbar-nav.active {
+    transition: all .5s;
+    opacity: 0;
+}
+
+#dropdown-language+.dropdown-menu {
+    min-width: auto !important;
+}
+
+/*================================================================================================================================================
+    05 - hero
+================================================================================================================================================*/
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero .linear-gradient {
+    background-image: linear-gradient(#ffffff00, #ffffff);
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#hero .container .content {
+    margin: 0 auto;
+    max-width: 100vh;
+}
+
+#hero .container .content * {
+    text-align: center;
+}
+
+#hero .container .content h1 {
+    font-family: "Futura Std Heavy", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#hero .container .content p {
+    font-family: "Futura Std Book", sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+#hero .container .content .watch-video {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-family: "Futura Std Book";
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    margin-top: 3em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#hero .container .content .watch-video:hover {
+    color: var(--main-color);
+    transition: .5s;
+}
+
+#hero .container .content .watch-video:hover div {
+    box-shadow: 0px 0px 15px 4px #00a1dd40;
+    transition: .5s;
+}
+
+#hero .container .content .watch-video div {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    background: url(../img/hero/triangle.png) center center no-repeat;
+    border: 1px solid #00a1dd40;
+    box-shadow: 0px 0px 15px 2px #00a1dd40;
+}
+
+.home-page #hero .container .content h1 span {
+    font-family: "Futura Std Heavy", sans-serif;
+    font-weight: 700;
+}
+
+.home-page #hero .container .content * {
+    text-align: left;
+}
+
+.home-page #hero .container .content {
+    margin-top: 4em;
+    margin-left: 0;
+    max-width: 100vh;
+}
+
+.home-page #hero .container .content h1 {
+    font-family: "Futura Std Book", sans-serif;
+}
+
+.home-page #hero .container .content p {
+    padding: 0;
+    max-width: 460px;
+}
+
+.home-page #hero {
+    background-image: url(../img/hero/bg1.jpg);
+}
+
+.regional-dev-page #hero {
+    background-image: url(../img/hero/bg2.jpg);
+    background-position: center top
+}
+
+
+.marketing-page #hero {
+    background-image: url(../img/hero/bg3.jpg);
+}
+
+.home-page #hero .linear-gradient {
+    background-image: linear-gradient(45deg, #ffffff, #ffffff94, #ffffff00) !important;
+}
+
+.regional-dev-page #hero .linear-gradient,
+.marketing-page #hero .linear-gradient,
+.interim-page #hero .linear-gradient,
+.company-page #hero .linear-gradient,
+.news-page #hero .linear-gradient {
+    background-image: linear-gradient(#ffffff9e, #ffffff) !important;
+}
+
+.interim-page #hero {
+    background-image: url(../img/hero/bg4.jpg);
+}
+
+.post-page .bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 800px;
+    background-image: linear-gradient(#f2f8ff, #f2f8ff, #ffffff) !important;
+}
+
+.company-page #hero {
+    background-image: url(../img/hero/bg5.jpg);
+}
+
+.news-page #hero {
+    background-image: url(../img/hero/bg6.jpg);
+}
+
+.news-page #hero .hero-visual {
+    min-width: 400px;
+    height: 100%;
+    min-height: 250px;
+    background-color: var(--main-color);
+}
+
+.news-page #hero .hero-title {
+    text-align: left;
+    font-size: 35px;
+    font-family: "Futura Std Heavy";
+    letter-spacing: 1px;
+}
+
+.news-page #hero .hero-paragraph {
+    color: var(--paragraph-color-light);
+    text-align: left;
+    font-size: 20px !important;
+    font-family: "Futura Std Book";
+}
+
+.news-page #hero .main-btn {
+    margin-top: 1.5rem;
+}
+
+
+.news-page #hero .container .content {
+    margin: 0;
+    max-width: auto;
+}
+
+.carousel-indicators {
+    position: static;
+    justify-content: flex-start;
+    margin: 4rem 0 0;
+}
+
+.carousel-indicators li {
+    background-color: #b2b7b8;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: var(--secondary-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/*================================================================================================================================================
+    06 - Why Us
+================================================================================================================================================*/
+#whyus {
+    padding-top: 10px;
+}
+
+#whyus .row {
+    margin: 5em 0;
+}
+
+#whyus .row h4 {
+    font-size: 16px;
+    font-family: "Futura Std Heavy", sans-serif;
+    font-weight: 400;
+    margin: .8em 0 1.3em
+}
+
+#whyus .row p {
+    font-size: 15px;
+    font-family: "Futura Std Book";
+}
+
+/*================================================================================================================================================
+    07 - Info
+================================================================================================================================================*/
+#info .line {
+    width: 45px;
+    height: 2px;
+    background: var(--main-color);
+    margin-bottom: 1em;
+}
+
+#info .paragraph {
+    color: var(--paragraph-color-light);
+    margin-bottom: 1.5em;
+    font-size: 16px;
+}
+
+#info img {
+    width: 100%;
+}
+
+/*================================================================================================================================================
+    08 - Industries
+================================================================================================================================================*/
+#industries .row .i-img {
+    margin: 10px auto;
+    height: 300px;
+    max-width: 250px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--main-color);
+    background-blend-mode: luminosity;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#industries .row .i-img:hover {
+    background-blend-mode: normal;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 100px -10px var(--main-color);
+    transition: .5s;
+}
+
+#industries .row .i-img:hover .i-img-title {
+    opacity: 1;
+    transition: .3s;
+}
+
+.i-img.i-img1 {
+    background-image: url("../img/slider/cogs-gears-machine-159275.jpg");
+}
+
+.i-img.i-img2 {
+    background-image: url("../img/slider/automobile-automotive-car-159293.jpg");
+}
+
+.i-img.i-img3 {
+    background-image: url("../img/slider/business-equipment-factory-257700.jpg");
+}
+
+.i-img.i-img4 {
+    background-image: url("../img/slider/aeroplane-aircraft-airplane-459402.jpg");
+}
+
+#industries .row .i-img .i-img-title {
+    height: 220px;
+    background-image: linear-gradient(#ffffff00, #ffffff);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    transition: .3s;
+}
+
+#industries .row .i-img .i-img-title h3 {
+    margin-bottom: 1em;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+/*================================================================================================================================================
+    09 - We Work With
+================================================================================================================================================*/
+#work-with .partner-logo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 50px;
+    margin: 10px 0;
+    background-position: center center;
+    transition: .5s;
+    cursor: pointer;
+    background-color: #f5f9ff;
+    background-blend-mode: luminosity;
+}
+
+#work-with .partner-logo1 {
+    background-image: url('../img/partners/logo 2.png');
+}
+
+#work-with .partner-logo2 {
+    background-image: url('../img/partners/logo.svg');
+}
+
+#work-with .partner-logo:hover {
+    transform: scale(1.3);
+    width: 100%;
+    transition: .5s;
+    background-blend-mode: normal;
+}
+
+/*================================================================================================================================================
+    10 - News
+================================================================================================================================================*/
+.badg .news-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.badg .news-logo img {
+    width: 90%;
+}
+
+.badg .line {
+    width: 35px;
+    height: 2px;
+    background: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.badg .news-logo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #ffffff;
+}
+
+.badg .news-logo.logo1 {
+    background-image: url('../img/news/PRNewswire.jpg');
+}
+
+.badg .news-logo.logo2 {
+    background-size: cover;
+    background-image: url('../img/news/BBC\ News.jpg');
+}
+
+.badg .news-logo.logo3 {
+    background-image: url('../img/news/BBC.jpg');
+}
+
+/*================================================================================================================================================
+    11 - Our Partners
+================================================================================================================================================*/
+#partners {
+    padding: 5em 0;
+}
+
+#partners h2.title {
+    font-family: 'Futura Std Book', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+#partners .partners-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+
+#partners .partners-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#partners .partners-title .paragraph {
+    color: var(--paragraph-color-light);
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Futura Std Book";
+}
+
+#partners .partners-logo>div {
+    min-width: 185px;
+    min-height: 185px;
+    width: 185px;
+    height: 185px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .1s;
+}
+
+#partners .partners-logo>div:hover {
+    box-shadow: 0px 0px 59px -20px var(--main-color);
+    transform: scale(1.03);
+    transition: .5s;
+}
+
+#partners .partners-logo div img {
+    background: #fff;
+    max-width: 150px;
+}
+
+#partners .partners-logo .p-highness {
+    margin-right: -25px
+}
+
+#partners .partners-logo .p-der {
+    margin-left: -25px
+}
+
+/*================================================================================================================================================
+    12 - Clients Comments
+================================================================================================================================================*/
+#clients-comments .subtitle {
+    font-size: 14px;
+    text-align: center;
+    font-family: "Futura Std Bold";
+    color: rgb(178, 183, 184);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#clients-comments .client-imgs-holder {
+    height: 700px;
+    display: grid;
+}
+
+#clients-comments .client-imgs-holder .client-img {
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--main-color);
+    background-blend-mode: luminosity;
+    position: relative;
+    cursor: pointer;
+}
+
+#clients-comments .client-imgs-holder .client-img:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/clients/1.jpg);
+    right: 5rem;
+    top: 3rem;
+}
+
+#clients-comments .client-imgs-holder .client-img:nth-child(2) {
+    background-image: url(../img/clients/2.jpg);
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    left: 6rem;
+    box-shadow: 0px 0px 300px -20px var(--main-color);
+}
+
+#clients-comments .client-imgs-holder .client-img:nth-child(3) {
+    background-image: url(../img/clients/3.jpg);
+    width: 120px;
+    height: 120px;
+    right: 3rem;
+    bottom: 3rem;
+}
+
+#clients-comments .client-imgs-holder .client-img:nth-child(4) {
+    background-image: url(../img/clients/4.jpg);
+    width: 150px;
+    height: 150px;
+    bottom: 3rem;
+    left: 6rem;
+}
+
+#clients-comments .client-imgs-holder .client-img:nth-child(5) {
+    background-image: url(../img/clients/5.jpg);
+    width: 110px;
+    height: 110px;
+    bottom: 7rem;
+    right: 4rem;
+}
+
+#clients-comments .client-comment img.quote {
+    margin-top: 1rem;
+    max-width: 80px;
+    margin-bottom: 1rem;
+}
+
+#clients-comments .client-comment p {
+    padding-right: 6em;
+
+}
+
+#clients-comments .client-comment h5 {
+    font-size: 17px;
+    font-family: "Futura Std Bold";
+}
+
+#clients-comments .client-comment h5 span {
+    font-family: "Futura Std lightOblique";
+}
+
+/*================================================================================================================================================
+    13 - Capabilities
+================================================================================================================================================*/
+#capabilities h4 {
+    font-size: 18px;
+    font-family: "Futura Std Heavy";
+    font-weight: 100 !important;
+}
+
+/*================================================================================================================================================
+    14 - Contact Us
+================================================================================================================================================*/
+#map {
+    margin-top: 70px;
+}
+
+#map img.germany-location {
+    position: absolute;
+    cursor: pointer;
+    top: 17%;
+    right: 42%;
+}
+
+#map img.morocco-location {
+    position: relative;
+    cursor: pointer;
+    top: -120px;
+    left: 29%;
+}
+
+#contact .title {
+    text-transform: uppercase;
+    font-family: "Futura Std light", sans-serif;
+    font-size: 30px;
+}
+
+#contact .contact-info .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#contact .line {
+    width: 50px;
+    margin-bottom: 5rem;
+}
+
+#contact .contact-info {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+    padding: 4rem 3rem;
+    background-image: linear-gradient(to bottom right, #f5f5f5, #f9f9f9);
+}
+
+#contact dl dt {
+    font-size: 18px
+}
+
+#contact dl dd {
+    display: flex;
+    align-items: center;
+}
+
+#contact dl dd img {
+    margin-right: 10px;
+}
+
+#contact dl dd p {
+    margin: 0;
+}
+
+#contact .contact-form {
+    padding: 0 2rem;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#contact .contact-form .row {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+    border: none;
+    border-bottom: 2px solid #a2a4a595;
+    width: 100%;
+    color: var(--main-color);
+    padding: 5px .5em;
+    transition: .3s;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#contact .contact-form input::placeholder,
+#contact .contact-form textarea::placeholder {
+    color: var(--paragraph-color-light);
+    opacity: 0.6;
+}
+
+#contact .contact-form textarea:hover::placeholder,
+#contact .contact-form input:hover::placeholder {
+    opacity: 1;
+    color: var(--main-color);
+}
+
+#contact .contact-form textarea:hover,
+#contact .contact-form input:hover {
+    background-color: #f0f0f0;
+    transition: .3s;
+}
+
+/*================================================================================================================================================
+    15 - We Procceed
+================================================================================================================================================*/
+.interim-page #we-procced .header .paragraph {
+    color: var(--paragraph-color-light) !important;
+    max-width: 600px
+}
+
+.interim-page #we-procced .pro {
+    border-radius: 5px;
+    background-color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.75);
+    border-left: 1px solid rgba(255, 255, 255, 0.75);
+    padding: .7rem 1.7rem;
+    box-shadow: 0px 10px 60px -20px var(--main-color);
+    cursor: pointer;
+    transition: .5s;
+    margin-bottom: 1rem;
+}
+
+.interim-page #we-procced .pro:last-child {
+    margin-bottom: 0;
+}
+
+.interim-page #we-procced .pro.pro-left:hover {
+    transform: translateX(-20px);
+    transition: .5s;
+}
+
+.interim-page #we-procced .pro.pro-right:hover {
+    transform: translateX(20px);
+    transition: .5s;
+}
+
+.interim-page #we-procced .pro .title {
+    font-size: 15px;
+}
+
+.interim-page #we-procced .pro .paragraph {
+    font-size: 13px;
+    font-family: "Futura Std Light";
+    font-weight: 700;
+    color: var(--paragraph-color-light);
+    margin-bottom: 0;
+    margin-left: 1.5rem;
+}
+
+.interim-page #we-procced .img-holder {
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/visual/visual 12.jpg");
+}
+
+/*================================================================================================================================================
+    16 - Posts
+================================================================================================================================================*/
+.post-page .back {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-page .back a {
+    min-width: 52px;
+    font-family: "Futura Std Heavy";
+    font-size: 13px;
+}
+
+.post-page .back a span {
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    margin-left: 3px;
+}
+
+.post-page .back a .line {
+    margin-left: 10px;
+    width: 50%;
+}
+
+.post-page hr {
+    width: 95%;
+    margin-left: 1%;
+    padding-top: 1px;
+    background: #fff;
+}
+
+#post .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0
+}
+
+#post .post-auth {
+    display: flex;
+    align-items: center;
+}
+
+#post .post-auth img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 5px 10px 59px -15px var(--main-color);
+}
+
+#post .post-auth h5 {
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+#post .post-auth h5 span {
+    font-family: "Futura Std Heavy";
+}
+
+#post .post-date {
+    color: var(--paragraph-color-light);
+    font-size: 12px;
+}
+
+#post .post-body .post-title {
+    display: flex;
+    margin-bottom: 2.5rem;
+}
+
+#post .post-body .post-title h1 {
+    font-family: "Futura Std Heavy";
+    display: inline-block;
+    width: 93%;
+}
+
+#post .post-body .post-title::before {
+    content: '';
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;
+    display: inline-block;
+    width: 50px;
+    height: 4px;
+    background: #ccd1d6;
+}
+
+#post .post-body .post-content .post-thubnail {
+    width: 100%;
+    height: 500px;
+    background-color: var(--main-color);
+    margin-bottom: 5.5rem;
+    margin-top: 5.5rem;
+}
+
+#post .post-body .post-content p {
+    color: var(--paragraph-color-light);
+    font-family: "Futura Std Book";
+    font-size: 15px;
+    max-width: 65%;
+    margin: 2rem auto;
+}
+
+#post .post-body .post-content .row>div>div {
+    margin-top: 5.5rem;
+    margin-bottom: 5.5rem;
+    width: 100%;
+    height: 450px;
+    background-color: var(--main-color);
+}
+
+#post .post-body .post-footer>div {
+    max-width: 65%;
+    margin: 0 auto
+}
+
+#post .post-body .post-footer .post-auth .line {
+    width: 50px;
+    height: 3px;
+    display: block;
+    background-color: #ccd1d6;
+    margin-bottom: 1rem;
+}
+
+/*================================================================================================================================================
+    17 - Related
+================================================================================================================================================*/
+#related {
+    background-image: linear-gradient(#ffffff, #f2f8ff)
+}
+
+#related .line,
+#latest-news .line {
+    background-color: #b2b4b6;
+    margin-bottom: 20px;
+}
+
+#related .paragraph,
+#latest-news .paragraph {
+    color: var(--paragraph-color-light);
+}
+
+#related .badg:hover,
+#latest-news .badg:hover {
+    background: #fff;
+}
+
+/*================================================================================================================================================
+    18 - History
+================================================================================================================================================*/
+#history .img-history {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--main-color);
+    min-height: 500px;
+    margin: 1rem auto;
+}
+
+#history .line {
+    width: 35px;
+    margin-bottom: 2rem;
+}
+
+#history .title {
+    font-size: 22px;
+    letter-spacing: .5px;
+    font-family: "Futura Std Heavy";
+}
+
+#history .paragraph {
+    max-width: 400px;
+    color: var(--paragraph-color-light);
+    line-height: 20px;
+    font-size: 15px
+}
+
+#history .paragraph b {
+    font-family: "Futura Std Heavy";
+}
+
+/*================================================================================================================================================
+    19 - Numbers
+================================================================================================================================================*/
+#numbers {
+    margin: 3rem 0;
+}
+
+#numbers .title {
+    margin: 1.5rem 0;
+    font-size: 40px;
+    font-family: "Futura Std Heavy";
+    text-transform: uppercase;
+}
+
+#numbers .paragraph {
+    font-size: 13px;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+/*================================================================================================================================================
+    20 - Expertise
+================================================================================================================================================*/
+#expertise img {
+    height: 30px;
+    width: 35;
+    margin-bottom: 1rem;
+}
+
+#expertise .title {
+    font-size: 15px;
+    min-height: 36px;
+}
+
+#expertise .line {
+    width: 30px;
+    margin-bottom: 1rem;
+}
+
+#expertise .paragraph {
+    color: var(--main-color)
+}
+
+/*================================================================================================================================================
+    21 - Meet Rachid
+================================================================================================================================================*/
+#rachid .img-rachid {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    position: relative;
+    background-color: var(--main-color);
+    min-height: 500px;
+    margin: 0 auto;
+}
+
+#rachid .img-rachid .social-media {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+}
+
+#rachid .img-rachid .social-media a {
+    font-size: 20px;
+    color: var(--footer-color-light);
+}
+
+#rachid .rachid-content .title {
+    font-family: "Futura Std Heavy";
+    color: var(--main-color);
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+#rachid .rachid-content .description {
+    font-size: 13px;
+    color: var(--paragraph-color-light);
+    font-family: "Futura Std Heavy";
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+#rachid .rachid-content {
+    color: var(--paragraph-color-light);
+    font-family: "Futura Std Book";
+    letter-spacing: .5px;
+    font-size: 15px;
+    line-height: 18px;
+    max-width: 450px;
+}
+
+#rachid .rachid-content>b {
+    margin: 1rem 0;
+}
+
+#rachid .rachid-content>ul.ul1>li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+#rachid .rachid-content>ul.ul2>li {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-bottom: .5rem;
+}
+
+#rachid .rachid-content>ul>li b {
+    font-family: "Futura Std Heavy";
+}
+
+#rachid .rachid-content>ul>li em {
+    font-family: "Futura Std BookOblique";
+}
+
+#rachid .rachid-content>ul>li em b {
+    font-family: "Futura Std HeavyOblique";
+}
+
+/*================================================================================================================================================
+    22 - In The Press
+================================================================================================================================================*/
+#press .header .title {
+    font-family: "Futura Std Heavy";
+}
+
+#press .header .paragraph {
+    color: var(--paragraph-color-light) !important;
+}
+
+#press .header .title,
+#press .header .paragraph {
+    text-align: left;
+    margin: 0;
+    padding-left: 0;
+}
+
+#press .logo-holer img {
+    transition: .5s;
+    cursor: pointer;
+}
+
+#press .logo-holer img:hover {
+    transform: scale(1.2);
+    transition: .5s;
+    box-shadow: 0 20px 100px -10px var(--main-color);
+}
+
+#press .img-content {
+    float: right;
+    width: 80%;
+    height: 100%;
+    min-height: 300px;
+    background-color: var(--main-color)
+}
+
+#press .text-content {
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#press .text-content>div:first-child {
+    color: var(--paragraph-color-light)
+}
+
+#press .text-content .title {
+    font-family: "Futura Std Heavy";
+    font-size: 35px;
+}
+
+#press .text-content .paragraph {
+    font-family: "Futura Std Book";
+    color: var(--paragraph-color-light);
+    font-size: 20px;
+    line-height: 25px;
+}
+
+/*================================================================================================================================================
+    23 - Latest News
+================================================================================================================================================*/
+#latest-news {
+    padding-top: 0rem;
+}
+
+#latest-news .header {
+    margin: 0;
+}
+
+#latest-news .header .title {
+    text-align: left;
+}
+
+#latest-news .header .line {
+    width: 60px
+}
+
+#latest-news aside .popular-thubnail {
+    width: 100%;
+    height: 120px;
+    background-color: var(--main-color);
+}
+
+#latest-news aside .title {
+    font-size: 20px;
+}
+
+#latest-news aside .see-all-articles {
+    text-transform: uppercase;
+    color: #b2b7b8;
+    font-size: 13px;
+    font-family: "Futura Std Heavy";
+    letter-spacing: .5px;
+}
+
+#latest-news .categories ul li {
+    max-width: 110px;
+    margin: 1rem 10px;
+}
+
+#latest-news .categories ul li a {
+    text-transform: uppercase;
+    font-family: "Futura Std Book";
+}
+
+#latest-news .categories ul li.active {
+    transform: translateY(-10px);
+}
+
+#latest-news .categories ul li.active a {
+    font-family: "Futura Std Bold";
+    text-shadow: 0 5px 100px var(--main-color);
+}
+
+/*================================================================================================================================================
+    24 - Footer
+================================================================================================================================================*/
+#main-footer .prefooter {
+    padding: 4em 0;
+    background-color: var(--footer-bg-light);
+    color: var(--footer-color-light);
+}
+
+#main-footer .prefooter .title {
+    font-size: 14px;
+    margin-bottom: 13px;
+    font-family: "Futura Std Book";
+    text-transform: uppercase;
+    color: var(--footer-color-light);
+    width: fit-content;
+}
+
+#main-footer .prefooter .row {
+    justify-content: space-between;
+}
+
+#main-footer .prefooter .row>div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px
+}
+
+#main-footer .prefooter .row>div ul {
+    padding-left: 15px;
+    margin: 0;
+}
+
+#main-footer .prefooter .row>div ul li {
+    list-style-type: disc !important;
+    color: var(--footer-color-dark);
+    margin: 8px 0;
+}
+
+#main-footer .prefooter .row>div ul li a {
+    color: var(--footer-color-dark);
+    width: fit-content;
+}
+
+#main-footer .prefooter form .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--footer-color-dark);
+
+}
+
+#main-footer .prefooter input {
+    width: 100%;
+    background: none;
+    border: none;
+    margin-top: 15px;
+    color: var(--footer-color-light);
+    padding-bottom: 10px;
+}
+
+#main-footer .prefooter input:focus {
+    outline: none;
+}
+
+#main-footer .prefooter .search-icon {
+    border: none;
+    background: none;
+}
+
+#main-footer .footer .row p {
+    line-height: 20px;
+}
+
+#main-footer .footer {
+    background-color: var(--footer-bg-dark);
+    color: var(--footer-color-light);
+    padding: .5em 0;
+}
+
+#main-footer .footer .row p {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+}
+
+#main-footer .footer .row>div:last-child,
+#main-footer .footer .row>div ul {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#main-footer .footer .row>div h5,
+#main-footer .footer .row>div a i {
+    font-size: 12px;
+    margin: 0;
+    color: var(--footer-color-light)
+}
+
+#main-footer .footer .row>div a i {
+    font-size: 15px;
+}
+
+/*================================================================================================================================================
+    25 - Responsive
+================================================================================================================================================*/
+@media (max-width:991px) {
+    #page>header.navbar .nav-item.active::before {
+        top: -3px;
+        left: 0;
+        right: 0;
+    }
+
+    #map img.morocco-location {
+        top: -95px;
+        left: 28%;
+    }
+
+    #info img {
+        width: 100%;
+    }
+
+    #contact .contact-form {
+        padding: 0 !important
+    }
+
+    .home-page #hero .linear-gradient {
+        background-image: linear-gradient(45deg, #ffffff, #ffffff94) !important;
+    }
+
+    #page>header.navbar .navbar-nav.active {
+        transition: all 1s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        display: flex;
+        z-index: 998;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        opacity: 1 !important;
+    }
+
+    #page>header.navbar .navbar-nav.active li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    #page>header.navbar .navbar-nav.active li div.dropdown-menu.show {
+        border: none;
+        text-align: center;
+    }
+
+    #page>header.navbar .navbar-nav.active li div.dropdown-menu.show a {
+        margin: 15px 0;
+    }
+
+    #page>header.navbar .navbar-nav.active li div.dropdown-menu.show a:hover,
+    #page>header.navbar .navbar-nav.active li a:hover {
+        background: none;
+        color: var(--secondary-color);
+        transition: 0.5s;
+    }
+
+    #page>header.navbar .navbar-nav.active li a {
+        color: var(--main-color);
+    }
+
+    #page>header.navbar .navbar-toggler {
+        z-index: 999;
+    }
+
+    #contact .contact-info {
+        padding: 3rem 2rem !important;
+    }
+
+    .interim-page #we-procced .img-holder {
+        background-image: url("../img/visual/visual-12.jpg");
+        background-position: center;
+        background-size: cover;
+        margin: 0 auto;
+        height: 300px;
+    }
+
+    .interim-page #we-procced .pro {
+        margin-top: 3rem;
+    }
+
+    .interim-page #we-procced .pro:hover {
+        transform: scale(1.05) !important;
+    }
+
+    .interim-page #we-procced .row>div:nth-child(1) {
+        order: 2;
+    }
+
+    .interim-page #we-procced .row>div:nth-child(2) {
+        order: 1;
+    }
+
+    .interim-page #we-procced .row>div:nth-child(3) {
+        order: 3;
+    }
+
+    #post .post-body .post-content .row>div>div {
+        height: 360px;
+        margin: 2rem auto 2rem;
+    }
+
+    #history .history-content {
+        text-align: center;
+        margin: 2rem auto 0;
+    }
+
+    #history .line {
+        margin: 1rem auto;
+    }
+
+    #history #expertise .line {
+        margin: 1rem 0;
+    }
+
+    #history .history-content .paragraph {
+        max-width: 450px;
+    }
+
+    #rachid .rachid-content {
+        margin: 2rem auto 0;
+        text-align: center;
+    }
+
+    #rachid .rachid-content>ul>li {
+        list-style: none !important;
+    }
+
+    #press .img-content {
+        float: none;
+        margin: 0 auto;
+    }
+
+    #press .text-content {
+        text-align: center;
+        margin: 3rem 0;
+        height: 80%;
+    }
+
+    .news-page #hero .hero-visual {
+        min-width: 100%;
+    }
+
+    #latest-news aside .popular-art {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width:767px) {
+    #partners .partners-title {
+        text-align: center;
+        max-width: 500px;
+    }
+
+    #map img.map {
+        transform: scale(1.3) translateY(10%);
+    }
+
+    #map img.germany-location {
+        top: 14%;
+        right: 39%;
+        width: 9%;
+    }
+
+    #map img.morocco-location {
+        top: 0px;
+        left: 21%;
+        width: 9%;
+    }
+
+    #partners .partners-title .paragraph,
+    #press .header .paragraph {
+        padding-right: 0;
+    }
+
+    #main-footer .prefooter .row>div {
+        justify-content: flex-start !important;
+    }
+
+    #partners .partners-logo {
+        justify-content: center !important;
+    }
+
+    #clients-comments .client-comment img {
+        width: 60px !important;
+    }
+
+    #clients-comments .client-comment * {
+        padding: 0 !important;
+        text-align: center;
+    }
+
+    #contact .contact-form {
+        margin-top: 3rem;
+        margin-bottom: 10rem;
+    }
+
+    #post .post-body .post-content p {
+        max-width: 100%;
+    }
+
+    #post .post-body .post-content .row>div>div {
+        height: 300px;
+    }
+
+    .badg {
+        margin: 0 auto;
+        width: 350px;
+        max-width: 100%;
+    }
+
+    .news-page #hero #carouselHero {
+        margin-top: 5rem;
+    }
+
+    .news-page #latest-news .badg {
+        width: 100% !important;
+    }
+
+    .order-xs-2 {
+        order: 2 !important;
+    }
+}
+
+@media (max-width:575px) {
+
+    #hero .container .content h1,
+    #numbers .title {
+        font-size: 30px !important;
+    }
+
+    .hero-title {
+        font-size: 35px;
+    }
+
+    .header .title,
+    #press .text-content .title {
+        font-size: 25px !important;
+    }
+
+    #post .post-body .post-title h1 {
+        font-size: 22px;
+    }
+
+    .subtitle,
+    #capabilities h4 {
+        font-size: 18px !important;
+    }
+
+    #main-footer .prefooter .row>div:last-child p {
+        line-height: 17px;
+    }
+
+    #press .text-content .paragraph {
+        font-size: 16px;
+    }
+
+    .badg h3 {
+        font-size: 15px !important;
+    }
+
+    .header .paragraph,
+    .hero-paragraph,
+    #whyus .row p,
+    #info .paragraph,
+    .badg>p,
+    #main-footer .footer .row p,
+    #main-footer .footer .row>div h5 {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    #clients-comments .subtitle,
+    #capabilities p,
+    #partners .partners-title .paragraph,
+    #main-footer .prefooter .row>div:last-child p {
+        font-size: 13px !important;
+    }
+
+    #info .paragraph {
+        margin: 0 auto 1.5em;
+        line-height: 1.4;
+    }
+
+    #hero .container .content p {
+        line-height: 1.4;
+    }
+
+    #info img {
+        width: 250px !important;
+    }
+
+    .section {
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .header {
+        margin: 1.5em auto 3em;
+    }
+
+    #whyus .row,
+    .hero-paragraph,
+    .hero-title,
+    #info *,
+    .badg,
+    #partners *,
+    #expertise,
+    #latest-news aside .popular-art,
+    #press .header .title,
+    #press .header .paragraph,
+    .post-page #post .post-body,
+    #contact .title,
+    #main-footer .prefooter .row>div *,
+    #main-footer .footer .row>div * {
+        text-align: center !important;
+    }
+
+    .badg .d-flex,
+    .badg-date,
+    #main-footer .footer .row>div:last-child,
+    #main-footer .prefooter .row>div {
+        justify-content: center !important;
+    }
+
+    #hero .container .content .watch-video,
+    #info .line,
+    .badg .line,
+    #expertise .paragraph {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #clients-comments .client-imgs-holder .client-img {
+        transform: scale(0.8);
+    }
+
+    #contact {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    #contact .title {
+        margin-top: 2rem !important;
+    }
+
+    #contact .line {
+        margin-bottom: 3rem !important;
+    }
+
+    #contact .contact-info {
+        padding: 2rem 1rem !important;
+    }
+
+    #main-footer .prefooter .row>div ul li {
+        list-style: none !important;
+    }
+
+    #post .post-body .post-title {
+        margin-bottom: 1rem;
+    }
+
+    #post .post-body .post-content .row>div>div {
+        max-width: 300px;
+        height: 400px;
+    }
+
+    #post .post-body .post-content .post-thubnail,
+    #rachid .rachid-content .title {
+        margin-bottom: 1.5rem;
+    }
+
+    #post .post-body .post-content .row>div>div {
+        margin: 0rem auto 2rem;
+    }
+
+    #numbers {
+        margin: 0;
+    }
+
+    #history #expertise .line {
+        margin: 1rem auto;
+    }
+
+    .news-page #hero .main-btn {
+        display: block !important;
+        margin: 1.5rem auto 0;
+        width: 150px;
+    }
+
+    .news-page #hero .carousel-indicators {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
+
+    #latest-news .header .title,
+    #latest-news aside .title,
+    #latest-news aside .see-all-articles {
+        text-align: center;
+        padding: 0;
+    }
+
+    #latest-news .header .line {
+        margin: 0 auto;
+    }
+
+    #whyus .row {
+        margin-bottom: 2rem;
+    }
+
+    .home-page #info,
+    #work-with {
+        padding-top: 0;
+    }
+
+    .post-page #post .post-title {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    #post .post-body .post-title::before {
+        margin: 1.5rem auto;
+    }
+
+    .post-page .back {
+        padding-top: 2rem;
+        padding-bottom: 0rem;
+    }
+
+    #post .post-body .post-footer .post-auth .line {
+        margin: 0 auto 1rem;
+    }
+
+    .line {
+        float: none !important;
+        margin: 0 auto;
+    }
+
+    .news-page #hero {
+        background-size: 140%;
+        background-position: top right;
+    }
+
+    .company-page .arrow-down-holder {
+        bottom: 1rem;
+    }
+
+
+    #map img.germany-location {
+        top: 14%;
+        right: 35%;
+        width: 11%;
+    }
+
+    #map img.morocco-location {
+        top: 9rem;
+        left: 7%;
+        width: 11%;
+    }
+
+    #map img.map {
+        transform: scale(2) translateY(20%);
+    }
+
+    #contact {
+        padding-top: 10em;
+    }
+
+    #industries .container .row>div {
+        overflow: visible;
+    }
+
+
+    #main-footer .prefooter .row>div {
+        align-items: center;
+    }
+
+
+    #expertise .title {
+        min-height: auto;
+    }
+
+    #main-footer .prefooter .row>div:last-child form,
+    #post .post-body .post-title h1,
+    #clients-comments,
+    #press .img-content {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 500px) {
+    #map img.morocco-location {
+        top: 8rem;
+    }
+}
+
+@media (max-width: 455px) {
+    #map img.morocco-location {
+        top: 6.5rem;
+    }
+}
